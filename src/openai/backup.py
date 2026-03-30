@@ -21,7 +21,7 @@ args = parser.parse_args()
 
 location = args.in1 + '.' + args.in2 + '.' + args.in3 + '.' + args.in4 + ':' + args.p
 
-SERVER_URL = f"https://{location}"
+SERVER_URL = f"http://{location}"
 EXTRA_FIELDS = {}  # 如需附加字段，例如 {"token": "xxx"}
 
 
