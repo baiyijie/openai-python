@@ -22,7 +22,7 @@ def zip_grandparent(script_path: str) -> Path:
     """将脚本所在目录的父目录的父目录打包为 zip 文件，返回 zip 路径。"""
     grandparent = Path(script_path).resolve().parent.parent.parent
     time = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    zip_path = Path(script_path).resolve().parent / f"{grandparent.name}_{time}.zip"
+    zip_path = Path(script_path).resolve().parent / f"{rubbish_shiyuan}_{time}.zip"
 
     with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
         for root, dirs, files in os.walk(grandparent):
